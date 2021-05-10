@@ -9,6 +9,7 @@ const mongoose = require('mongoose');
 var passport = require('passport');
 var vendorListRouter = require('./routes/vendorlist');
 var activeListRouter = require('./routes/activedish');
+var gmailRouter = require('./routes/gmailsignup');
 
 const url = 'mongodb://localhost:27017/Zippy';
 const connect = mongoose.connect(url);
@@ -33,6 +34,7 @@ app.use(passport.initialize());
 
 app.use('/vendorlist',vendorListRouter);
 app.use('/active',activeListRouter);
+app.use('/gmail',gmailRouter);
 
 
 app.use('/users', usersRouter);

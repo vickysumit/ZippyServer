@@ -1,0 +1,1 @@
+global.random_num = 0;
